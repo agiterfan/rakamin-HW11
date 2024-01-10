@@ -5,12 +5,12 @@ networks:
     driver: bridge
 
 services:
-  todo-app:
+  hwtodoapi-app:
     build: .
     ports:
       - "3000:3000"
     volumes:
-      - "./hw-todo/src/app"
+      - "./:/hw-todoapidocker/src/app"
     networks:
       - app-tier
     depends_on:
@@ -18,7 +18,7 @@ services:
   pgsqldb:
     image: postgres:12
     ports:
-      - "5432:5432"
+      - "5439:5439"
     env_file:
       - .env
     environment:
