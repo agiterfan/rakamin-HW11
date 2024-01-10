@@ -7,4 +7,4 @@ router.get('/:id', TodosController.getById)
 router.get('/', TodosController.create)
 router.get('/:id', TodosController.delete)
 
-module.exports = TodosController
+module.exports = router

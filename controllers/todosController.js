@@ -31,7 +31,7 @@ class TodosController {
                 { title, status }
             )
 
-            res.status(201).json({newData, message: "Todo Created!"})
+            res.status(201).json(newData)
         } catch (err) {
             res.status(500).json({message: "Something went wrong", error: err})
         }
